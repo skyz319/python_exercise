@@ -5,6 +5,7 @@ import os
 import urllib
 import requests
 
+
 def getPage(keyword, page, n):
     """
     拼接Page的请求URL
@@ -16,11 +17,14 @@ def getPage(keyword, page, n):
     page = page * n
     keyword = urllib.parse.quote(keyword, safe="/")
     baseUrl = "http://image.baidu.com/search/flip?tn=baiduimage&ie=utf-8&word="
-    url = baseUrl + keyword + "&pn=" +str(page) + "&gsm=" + str(hex(page)) + "&ct=&ic=0&lm=-1&width=0&height=0"
+    url = baseUrl + keyword + "&pn=" + \
+        str(page) + "&gsm=" + str(hex(page)) + \
+        "&ct=&ic=0&lm=-1&width=0&height=0"
     return url
 
+
 def get_onepage_urls(onePageurl):
-    """
+    """å
     根据URL地址得到图片地址
     :param onePageurl:
     :return: 图片地址
@@ -33,6 +37,7 @@ def get_onepage_urls(onePageurl):
         return pic_urls
     pic_urls = re.findall('"objURL":"(.*?)",', html, re.S)
     return pic_urls
+
 
 def down_pic(pic_urls):
     """根据给定图片url下载所有图片"""
@@ -51,6 +56,7 @@ def down_pic(pic_urls):
             print("下载第%s张图片失败： %s" % (str(i + 1), str(pic_url)))
             print(e)
             continue
+
 
 if __name__ == '__main__':
 
