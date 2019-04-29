@@ -11,11 +11,11 @@ class Readfree:
         return {i.split("=")[0]: i.split("=")[1] for i in str.split("; ")}
 
 
-
 if __name__ == '__main__':
     headers = {
         'User-Ageng': 'Mozilla/5.0 (iPhone; CPU iPhone OS 11_0 like Mac OS X)\
                         AppleWebKit/604.1.38 (KHTML, like Gecko) Version/11.0 Mobile/15A372 Safari/604.1'}
+
     tmp = "OUTFOX_SEARCH_USER_ID_NCOO=57382894.089077; \
     csrftoken=R68atAZPO16JptocHkpI6AQBVlgZIXNWrwOKRW4aiwVQcCe6pvVLgoeWpYqIuuUX; \
     sessionid=9lfqhnqji48gjxforjcobcdopj5ydh4q"
