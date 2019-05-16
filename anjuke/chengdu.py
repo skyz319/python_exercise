@@ -1,6 +1,5 @@
 from selenium import webdriver
 
-
 get_url = 'https://chengdu.anjuke.com/sale/xq1/'
 
 driver = webdriver.Chrome()
@@ -13,8 +12,11 @@ for li in ret1:
 
     # 房屋图片Url
     # print(li.find_element_by_xpath('.//img').get_attribute('src'))
-    #   房屋title
+    # 房屋title
     # print(li.find_element_by_xpath(".//div[@class='house-details']//a").get_attribute('title'))
+
+    # 房屋跳转Url
+    # print(li.find_element_by_xpath(".//div[@class='house-details']//a").get_attribute('href'))
 
     # 房屋基本信息
     # ret2 = li.find_elements_by_xpath(".//div[@class='details-item']//span")
@@ -41,5 +43,4 @@ for li in ret1:
     # print(li.find_element_by_xpath(".//span[@class='unit-price']").text)
 
 
-print(len(ret1))
-
+# print(len(ret1))
